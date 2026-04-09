@@ -7,25 +7,35 @@
 
 // Exercício 1 — criarSaudacao
 export function criarSaudacao(nome) {
-  // escreva seu código aqui
+    return `Olá, ${nome}!`;
 }
 
 // Exercício 2 — filtrarAprovados
 export function filtrarAprovados(alunos) {
-  // escreva seu código aqui
+  return alunos.filter((aluno) => aluno.nota >= 60);
 }
 
 // Exercício 3 — extrairNomes
 export function extrairNomes(alunos) {
-  // escreva seu código aqui
+  return alunos.map(aluno => aluno.nome);
 }
 
 // Exercício 4 — buscarAluno
 export function buscarAluno(alunos, nome) {
-  // escreva seu código aqui
+  return alunos.find((alunos) => alunos.nome === nome);
 }
 
 // Exercício 5 — calcularMedia
 export function calcularMedia(notas) {
-  // escreva seu código aqui
-}
+  let valor = 0;
+  for(let i = 0; i<notas.length; i++){ 
+      valor += notas[i]; 
+
+  }
+  if (notas.length != 0 ){
+  let media = valor/notas.length;
+  return media;} 
+  else{
+    return 0;
+  }
+ }
